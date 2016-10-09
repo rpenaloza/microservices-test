@@ -1,33 +1,39 @@
----
 # Items that apply to ALL profiles:
 eureka:
   client:
-    registerItheEureka: false
-    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8010/eureka/
+      defaultZone: http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
+server:
+  port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.
 
 ---
 spring:
-  profiles: subject
-words: I,You,He,She,It
+  profiles: team
+server:
+  port: 8020  
+pokemones: NoAplica
+    
+---
+spring:
+  profiles: agua
+pokemones: Blastoise,Magikarp,Vaporeon
   
 ---
 spring:
-  profiles: verb
-words: ran,knew,had,saw,bought
+  profiles: fuego
+pokemones: Chorizard,Vulpix,Magnar
 
 ---
 spring:
-  profiles: article
-words: a,the
+  profiles: dragon
+pokemones: Dratini,Dragonair,Dragonite
 
 ---
 spring:
-  profiles: adjective
-words: reasonable,leaky,suspicious,ordinary,unlikely
+  profiles: hierba
+pokemones: Venosor,Oddish,Bellsprout
 
 ---
 spring:
-  profiles: noun
-words: boat,book,vote,seat,backpack,partition,groundhog
+  profiles: legendario
+pokemones: articuno,zapdos,moltres,mew,mewtwo
