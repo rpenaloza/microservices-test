@@ -16,8 +16,8 @@ pokemones: NoAplica
 ---
 spring:
   profiles: agua
-pokemones: Blastoise,Magikarp,Vaporeon
-  
+pokemones: nuevo1,nuevo2,nuevo3
+  #Blastoise,Magikarp,Vaporeon
 ---
 spring:
   profiles: fuego
